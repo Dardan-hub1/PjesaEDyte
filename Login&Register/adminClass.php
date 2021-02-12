@@ -6,7 +6,7 @@ class Admin extends Person
 {
     public function __construct($username, $password,$role)
     {
-        parent::__construct($username, $password,$role);
+        parent::__construct($username, $password,$role); 
     }
 
 
@@ -21,4 +21,22 @@ class Admin extends Person
     {
         setcookie("username", $this->getUsername(), time() + 2 * 24 * 60 * 60);
     }
+    
+    public function getEmail()
+    {
+        return $this->email;
+    }
+    public function getUsername()
+    {
+        return $this->username;
+    }
+    public function getPassword()
+    {
+        return $this->password;
+    }
+    public function getRole()
+    {
+        return $this->role;
+    }
 }
+

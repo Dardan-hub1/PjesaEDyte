@@ -26,23 +26,23 @@
         <p>enter your username and password here.</p>
 <ul>
 <li><label>Username:</label></li>
-<li><input type="text" name="username" class="login" size="15" placeholder="Username"/></li>
+<li><input type="text" name="username" id="userid" class="login" size="15" placeholder="Username"/></li>
 <li><label>Password:</label></li>
-<li><input type="password" name="password" size="15" class="login" placeholder="Password"/></li>
-<li><input type="submit" value="Login"  id="login-btn" onclick="validate(0)"/></li>
+<li><input type="password" name="password" id="pass" size="15" class="login" placeholder="Password"/></li>
+<li><input type="submit" value="Login"  id="login-btn" name='login-btn' onclick="validate(0)"/></li>
 </ul>
 </div>
 <div class="register forms hidden">
     <p>If you don't have a Ford or Lincoln account,</p>
     <p>create an account here for free.</p>
     <ul>
-        <li><label>Name and Surname:</label></li>
-       <li><input type="text" id="name" class="login" size="40" placeholder="Name Surname"/></li>
+       <li><label>Name and Surname:</label></li>
+       <li><input type="text" id="name" class="login" size="40" name="username" placeholder="Name Surname"/></li>
        <li><label>Email:</label></li>
-       <li><input type="text" id="email" class="login" size="40" placeholder="Email"/></li>
+       <li><input type="text" id="email" class="login" size="40" name="email" placeholder="Email"/></li>
        <li><label>Password:</label></li>
-       <li><input type="password" id="pass" class="login" size="15" placeholder="Password"/></li>
-       <li><input type="submit"  id="login-btn" value="Login" onclick="validate(1)"/></li>
+       <li><input type="password" id="pass" class="login" size="15" name="password" placeholder="Password"/></li>
+       <li><input type="submit"  id="login-btn" value="Register" name='register-btn' onclick="validate(1)"/></li>
     </ul>
 </div>
 </form>

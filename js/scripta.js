@@ -1,47 +1,37 @@
-function changeForm(number){
+    var usernameR= /^[a-zA-Z0-9]{12,}$/;
+    var passwordR= /^[A-Z](?=[a-z]*)(?=.*[a-z])(?=.*[0-9])(?=.{10,})+$/;
+    var namesurnameR=/^[a-zA-Z0-9]{25,}$/;
+    var emailRegex = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    
+function validate(number){
 
-    var divElements=document.getElementsByClassName('forms');
-    if(number==0){
-        divElements[0].classList.remove('hidden')
-        divElements[0].classList.add('form-style')
-        divElements[1].classList.add('hidden')
-        divElements[1].classList.remove('form-style')
-    }else if(number==1){
-      divElements[1].classList.remove('hidden')
-      divElements[1].classList.add('form-style')
-      divElements[0].classList.add('hidden')
-      divElements[0].classList.remove('form-style')
-    }
-    }
-    const usernameR= /^[a-zA-Z0-9]{12,}$/;
-    const passwordR= /^[A-Z](?=[a-z]*)(?=.*[a-z])(?=.*[0-9])(?=.{10,})+$/;
-    const emailRegex = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-    const namesurnameR=/^[a-zA-Z0-9]{25,}$/;
-
-    function validate(number){
         username = inputList[0].value;
         password = inputList[1].value;
         var inputList=document.getElementsByClassName("login");
 
         if(number==0){
-            if(username.value==="" || password.value===""){
-                alert("Ju lutem mbusheni te dhenat e juaja1")
+            if(inputList[0].value==="" || inputList[1].value===""){
+                alert("Ju lutem mbusheni te dhenat e juaja1");
             }
             else if(usernameR.test(username) && passwordR.test(password)){
-                alert('Te dhenat e juaja nuk jane ne rregull')
+                alert('Te dhenat e juaja nuk jane ne rregull');
             }
             else if(!usernameR.test(username)){
-                alert('Username juaj nuk eshte ne rregull')
+                alert('Username juaj nuk eshte ne rregull');
             }
             else if(!passwordR.test(password)){
-                alert('Passwordi juaj nuk eshte ne rregull')
+                alert('Passwordi juaj nuk eshte ne rregull');
+            }
+            else{
+                alert('Correct')
             }
         }
+
         namesurname=inputList[3].value;
         email=inputList[4].value;
         password2=inputList[5].value;
 
-        if (number == 1) {
+        if (number==1) {
             if (namesurname === "" || email=== "" || password2=== "") {
                 alert("Ju lutem mbusheni te dhenat e juaja1...")
             } else if (namesurname.test(namesurnameR) && email.test(emailRegex) && password2.test(passwordR)){
@@ -58,3 +48,19 @@ function changeForm(number){
         }
     }
 
+    function changeForm(number){
+
+        var divElements=document.getElementsByClassName('forms');
+        if(number==0){
+            divElements[0].classList.remove('hidden')
+            divElements[0].classList.add('form-style')
+            divElements[1].classList.add('hidden')
+            divElements[1].classList.remove('form-style')
+        }else if(number==1){
+          divElements[1].classList.remove('hidden')
+          divElements[1].classList.add('form-style')
+          divElements[0].classList.add('hidden')
+          divElements[0].classList.remove('form-style')
+        }
+        }
+    
