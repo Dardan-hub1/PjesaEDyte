@@ -1,16 +1,16 @@
 <!DOCTYPE html>
 <html>
-    <head> 
-    <?php
-    session_start();
-      if (isset($_SESSION["role"]) && $_SESSION['role'] == '1') {
-        header('Location:../Pages/Dashboard.php');
-      ?>
-      <?php
-      }
-      ?>
-        <title>Home</title>
-        <link href="../css/stili7.css" rel="stylesheet" type="text/css">
+<?php
+include_once '../Login&Register1/userMapper.php';
+if (isset($_GET['id'])) {
+    $userId = $_GET['id'];
+    $mapper = new UserMapper();
+    $user = $mapper->getUserByID($userId);
+}
+?>
+<head>
+        <title>Edit page</title>
+        <link href="../css/stili8.css" rel="stylesheet" type="text/css">
         </head>
     <body>
         <header>
@@ -33,14 +33,25 @@
                         <li><a href="#">FINANCE</a></li>
                         <li><a href="#">SUPPORT</a></li>
                         <li><a href="#">EN</a></li>
+                        <li><a href="../Login&Register1/logout.php">Logout</a></li>
                     </ul>
             </div>
             </div>
         </header>
-        <main>
-            <h1>This page is Home Page</h1>
-        </main>
-        <footer>
+<div class='container'>
+    <h1>Modifiko perdoruesin</h1>
+    <form class="mainForm" action="../Login&Register1/editUser.php" method="get">
+        <div class="login forms form-style">
+            <input type="text" style="display:none;" value=<?php echo $userId;?> name="id" />
+            <label for="">Name:</label>
+            <input type="text" name='username' class="input" placeholder="username..." value=<?php echo $user['username']; ?> />
+            <label for="">Last Name:</label>
+            <input type="text" name='lastName' class="input" placeholder="lastname..." value=<?php echo $user['userLastname']; ?> />
+            <input id="submit" type="submit" name='login-btn' class="input submit" value="Edit" />
+        </div>
+    </form>
+</div>
+<footer>
             <div id="footer">
                 <h2>California Resident</h2>
                 <p>Exercise your rights under the California Consumer Privacy Act here</p>

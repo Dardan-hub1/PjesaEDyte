@@ -20,7 +20,7 @@
 <a onclick="changeForm(0)" href="#">Login</a>
 <a onclick="changeForm(1)" href="#">Sign In</a>
 </div>
-<form id="mainForm" action="../Login&Register/loginverify.php" method="post" onsubmit="return validate()">
+<form id="mainForm" action="../Login&Register1/loginverify.php" method="post" onsubmit="return validate()">
     <div class="login forms form-style">
         <p>If you have a Ford or Lincoln account,</p>
         <p>enter your username and password here.</p>
@@ -37,11 +37,11 @@
     <p>create an account here for free.</p>
     <ul>
        <li><label>Name and Surname:</label></li>
-       <li><input type="text" id="name" class="login" size="40" name="username" placeholder="Name Surname"/></li>
+       <li><input type="text" id="name" class="login" size="40" name="register-username" placeholder="Name Surname"/></li>
        <li><label>Email:</label></li>
-       <li><input type="text" id="email" class="login" size="40" name="email" placeholder="Email"/></li>
+       <li><input type="text" id="email" class="login" size="40" name="register-lastname" placeholder="Email"/></li>
        <li><label>Password:</label></li>
-       <li><input type="password" id="pass" class="login" size="15" name="password" placeholder="Password"/></li>
+       <li><input type="password" id="pass" class="login" size="15" name="register-password" placeholder="Password"/></li>
        <li><input type="submit"  id="login-btn" value="Register" name='register-btn' onclick="validate(1)"/></li>
     </ul>
 </div>

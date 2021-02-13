@@ -1,7 +1,18 @@
 <!DOCTYPE html>
 <html>
+<?php
+//include_once '../Login&Register1/variables.php';
+include_once '../Login&Register1/userMapper.php';
+session_start();
+if (isset($_SESSION['role']) && $_SESSION['role'] == '1') {
+    $mapper =  new UserMapper();
+    $userList = $mapper->getAllUsers();
+} else {
+    header("Location:./Pages/Account.php");
+}
+?>
     <head>
-        <title>Faqja e pare</title>
+        <title>Dashboard</title>
         <link href="../css/stili6.css" rel="stylesheet" type="text/css">
         </head>
     <body>
@@ -25,12 +36,48 @@
                         <li><a href="#">FINANCE</a></li>
                         <li><a href="#">SUPPORT</a></li>
                         <li><a href="#">EN</a></li>
+                        <li><a href="../Login&Register1/logout.php">Logout</a></li>
                     </ul>
             </div>
             </div>
         </header>
         <main>
-            <h1>This page is Dashboard Page</h1>
+            <div id='table'>
+        <h2>User list:</h2>
+        <table border='1'>
+            <thead>
+                <tr>
+                    <td>Emri</td>
+                    <td>Mbiemri</td>
+                    <td>Roli</td>
+                    <td>Detajet</td>
+                    <td>Modifiko</td>
+                    <td>Fshij</td>
+                </tr>
+            </thead>
+            <tbody>
+                <?php
+                foreach ($userList as $user) {
+                ?>
+                    <tr>
+                        <td><?php echo $user['username']; ?></td>
+                        <td><?php echo $user['userLastname']; ?></td>
+                        <td><?php echo $user['role']; ?></td>
+                        <td><a href=<?php echo "../Login&Register1/detailsUser.php?id=" . $user['userid']; //to be continued by students
+                                    ?>>Detajet</a></td>
+                        <td><a href=<?php echo "../Pages/edit.php?id=" . $user['userid'];
+                                    ?>>Modifiko</td>
+                        <td><a href=<?php echo "../Login&Register1/deleteUser.php?id=" . $user['userid'];
+                                    ?>>Fshij</td>
+                    </tr>
+                <?php
+                }
+                ?>
+            </tbody>
+        </table>
+    </div>
+
+
         </main>
         <footer>
             <div id="footer">

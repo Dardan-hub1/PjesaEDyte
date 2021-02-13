@@ -1,4 +1,6 @@
-*{margin:0;padding:0;}
+*{margin:0;
+ padding:0;
+}
 
 #mbjatesi1{
     width: 97%;
@@ -53,13 +55,6 @@ li a{text-decoration: none;
 li a:hover{border-bottom: 0.5px solid rgb(169, 169, 223);
     color: rgb(75, 176, 216);                
 }
-main{
-    text-align: center;
-    font-size: 75px;
-    font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    margin-bottom: 150px;
-
-}
 #footer{
     background-color: rgb(33, 66, 126);
     text-align: center;
@@ -77,4 +72,11 @@ main{
     padding-right: 10px;
     padding-top: 0px;
     padding-bottom: 5px;
+}
+#table{
+    background-color: rgb(102, 145, 209)117, 117);
+    font-size: 55px;
+    width:80%;
+    margin-left:55px;
+    margin-bottom:150px;
 }
