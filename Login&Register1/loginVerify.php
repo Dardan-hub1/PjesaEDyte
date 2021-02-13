@@ -33,7 +33,7 @@ class LoginLogic
             header("Location:../Pages/Account.php");
         } else if ($this->usernameAndPasswordCorrect($this->username, $this->password)) {
             echo '2';
-            header('Location:../Pages/Dashboard.php');
+            header('Location:../Pages/Home.php');
         } else {
             echo '3';
             header("Location:../Pages/Account.php");
@@ -81,6 +81,7 @@ class RegisterLogic
 
     public function insertData()
     {
+        echo "WRONG";
         $user = new SimpleUser($this->username, $this->password, 25, 0, $this->userLastName);
 
         $mapper = new UserMapper();

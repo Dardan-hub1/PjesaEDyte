@@ -1,7 +1,9 @@
 
   <!DOCTYPE html>
-  <html>
-    <head>
+  <html lang="en">
+
+<head>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />  
       <title>Faqja e dyte</title>
       <link href="../css/stili2.css" rel="stylesheet" type="text/css">
     </head>
@@ -17,7 +19,7 @@
                     <li><a href="#">SUV&CROSSOVERS</a></li>
                     <li><a href="#">ELICTRIFIED</a></li>
                     <li><a href="#">CARS</a></li>
-                    <li><a href="#">ALL VEHICLES</a></li>
+                    <li><a href="#">Add Vehicle</a></li>
                 </ul>
             </div>
         <div id="headerD">
@@ -34,19 +36,19 @@
         <div class="main">
           <div class="slider">
             <div class="slider-content active">
-              <img src="../photos/Suv-Ford.png" alt=""/>
+              <img src="../photos/suv1.png" alt=""/>
             </div>
             <div class="slider-content not-active">
-              <img src="../photos/Suv-Ford2.png" alt=""/>
+              <img src="../photos/s2.png" alt=""/>
             </div>
         </div>
         <div class="text">
           <h2>Something for Everyone</h2>
           <p>See our full lineup of vehicles and find the one that best fits you.</p>
           <ul id="list1">
-            <li><a href="#">All Vehicles</a></li>
+            <li><a href="#">Add Vehicle</a></li>
             <img src="../photos/cars.png">
-            <a href="#"><img src="photos/holidays.png"></a>
+            <a href="#"><img src="../photos/holidays.png"></a>
       </ul>
         </div>
       </div>

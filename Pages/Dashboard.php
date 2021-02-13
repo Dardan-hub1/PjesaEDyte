@@ -27,7 +27,7 @@ if (isset($_SESSION['role']) && $_SESSION['role'] == '1') {
                         <li><a href="#">SUV&CROSSOVERS</a></li>
                         <li><a href="#">ELICTRIFIED</a></li>
                         <li><a href="#">CARS</a></li>
-                        <li><a href="#">ALL VEHICLES</a></li>
+                        <li><a href="#">Add Vehicle</a></li>
                     </ul>
                 </div>
             <div id="headerD">

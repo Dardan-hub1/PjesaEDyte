@@ -1,9 +1,10 @@
 
 <!DOCTYPE html>
 <html>
-    <head>
+<head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Faqja e pare</title>
-        <link href="../css/stili1.css" rel="stylesheet" type="text/css">
+        <link href="../css/stili1.css"  rel="stylesheet" type="text/css">
         </head>
     <body>
         <header>
@@ -17,7 +18,7 @@
                         <li><a href="#">SUV&CROSSOVERS</a></li>
                         <li><a href="#">ELICTRIFIED</a></li>
                         <li><a href="#">CARS</a></li>
-                        <li><a href="#">ALL VEHICLES</a></li>
+                        <li><a href="#">Add Vehicle</a></li>
                     </ul>
                 </div>
             <div id="headerD">
