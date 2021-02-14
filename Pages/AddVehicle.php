@@ -2,7 +2,7 @@
 <html>
 <head>
 <title>AddVehicle</title>
-<link rel='stylesheet' href='../css/stili4.css' type='text/css' />
+<link rel='stylesheet' href='../css/stili9.css' type='text/css' />
 </head>
 <body>
 <div id="formulari">
@@ -13,9 +13,11 @@
             <li><img src="../photos/Ford-logo-1.png"></li>
         </ul>
     </div>
+</div>
 </header>
 <main>
-<form>
+<form id="mainForm" action="../Vehicle/VehicleVerify.php" method="post" onsubmit="return validate()">
+<p>Add a Vehicle in the page</p>
 <div class="register forms">
     <ul>
        <li><label>Type:</label></li>
@@ -31,8 +33,11 @@
        <li><input type="submit"  id="vehicle-btn" value="Add" name='vehicle-btn'/></li>
     </ul>
 </div>
-</div>
 </form>
+</main>
+</div>
+</div>
+</body>
 <footer>
     <div id="footer">
         <h3>California Resident</h3>
@@ -40,5 +45,4 @@
         <a href="#">Do Not Sell My Personal Information</a>
     </div>
 </footer>
-</body>
 </html>

@@ -2,6 +2,7 @@
 
 include_once 'VehicleMapper.php';
 require_once 'VehicleModel.php';
+
 session_start();
 
  if (isset($_POST['vehicle-btn'])) {
@@ -25,13 +26,13 @@ class AddVehicle
         $this->model = $formData['model'];
         $this->price=$formData['price'];
         $this->year=$formData['year'];
-        $this->imgUrl = "test"; //$formData['file'];
+        $this->imgUrl = "test";
     }
 
     public function insertData()
     {
         
-        $vehicle = new VehicleModel($this->type,$this->model, $this->price,$this->year,$this->imgUrl);
+        $vehicle = new VehicleModel($this->type,$this->model, $this->price,$this->year, $this->imgUrl);
 
         $mapper = new VehicleMapper();
         $mapper->insertVehicle($vehicle);

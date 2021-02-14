@@ -7,12 +7,12 @@ session_start();
 //main
 if (isset($_POST['login-btn'])) {
     $login = new LoginLogic($_POST);
-    $login->verifyData();
+    // $login->verifyData();
 } else if (isset($_POST['register-btn'])) {
     $register = new RegisterLogic($_POST);
-    $register->insertData();
+    // $register->insertData();
 } else {
-    header("Location:../Pages/Account.php");
+    // header("Location:../Pages/Account.php");
 }
 
 class LoginLogic

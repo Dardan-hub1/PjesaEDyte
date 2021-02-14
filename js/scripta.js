@@ -4,7 +4,10 @@
     var emailRegex = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
     
 function validate(number){
-
+        console.log("Number", number);
+        console.log("input list", inputList);
+        console.log(document)
+        alert("Ju lutem mbusheni te dhenat e juaja1");
         username = inputList[0].value;
         password = inputList[1].value;
         var inputList=document.getElementsByClassName("login");
@@ -47,6 +50,7 @@ function validate(number){
             } 
         }
     }
+    
 
     function changeForm(number){
 

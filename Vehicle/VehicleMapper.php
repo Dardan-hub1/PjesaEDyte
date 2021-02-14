@@ -22,19 +22,6 @@ class VehicleMapper extends DatabasePDOConfiguration
         return $result;
     }
 
-    // public function edit(\VehicleModel $vehicle, $id)
-    // {
-    //     $this->query = "update user set username=:username, userLastname=:lastname where userID=:id";
-    //     var_dump($user);
-    //     $statement = $this->conn->prepare($this->query);
-    //     $username = $user->getUsername();
-    //     $lastname = $user->getLastname();
-    //     $statement->bindParam(":username", $username);
-    //     $statement->bindParam(":lastname", $lastname);
-    //     $statement->bindParam(":id", $id);
-    //     $statement->execute();
-    // }
-
     public function getVehicleByModel($model)
     {
         $this->query = "select * from vehicle where model=:model";
@@ -56,8 +43,7 @@ class VehicleMapper extends DatabasePDOConfiguration
 
     public function insertVehicle(\VehicleModel $vehicle)
     {
-        echo "modelV" . $vehicle;
-        $this->query = "insert into vehicle (type,model,price,year,Image_Url) values (:type,:model,:price,:year,:imgUrl)";
+        $this->query = "insert into vehicle (type,model,price,year, Image_Url) values (:type,:model,:price,:year, :imgUrl)";
         $statement = $this->conn->prepare($this->query);
         $type = $vehicle->getType();
         $model = $vehicle->getModel();
@@ -68,15 +54,16 @@ class VehicleMapper extends DatabasePDOConfiguration
         $statement->bindParam(":model", $model);
         $statement->bindParam(":price", $price);
         $statement->bindParam(":year", $year);
+        $statement->bindParam(":edited_by", $edited_by);
         $statement->bindParam(":imgUrl", $Image_Url);
         $statement->execute();
     }
 
-    public function deleteUser($vehicleId)
+    public function deleteVehicle($vehicleId)
     {
-        $this->query = "delete from vehicle where vehicleId=:id";
+        $this->query = "delete from vehicle where id=:vehicleId";
         $statement = $this->conn->prepare($this->query);
-        $statement->bindParam(":id", $vehicleId);
+        $statement->bindParam(":vehicleId", $vehicleId);
         $statement->execute();
     }
 }

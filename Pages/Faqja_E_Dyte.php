@@ -19,12 +19,12 @@
                     <li><a href="#">SUV&CROSSOVERS</a></li>
                     <li><a href="#">ELICTRIFIED</a></li>
                     <li><a href="#">CARS</a></li>
-                    <li><a href="#">Add Vehicle</a></li>
+                    <li><a href="./AddVehicle.php">Add Vehicle</a></li>
                 </ul>
             </div>
         <div id="headerD">
                 <ul>
-                    <li><a href="#">MY ACCOUNT</a></li>
+                    <li><a href="./Account.php">MY ACCOUNT</a></li>
                     <li><a href="#">FINANCE</a></li>
                     <li><a href="#">SUPPORT</a></li>
                     <li><a href="#">EN</a></li>
