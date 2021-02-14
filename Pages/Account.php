@@ -17,6 +17,7 @@ echo '<script src="../js/scripta.js">  </script> ';?>
     </div>
 </header>
 <main>
+<div id="formulari2">
 <div id="formulari">
 <div id="header1">
 <a onclick="changeForm(0)" href="#">Login</a>
@@ -48,6 +49,7 @@ echo '<script src="../js/scripta.js">  </script> ';?>
     </ul>
 </div>
 </form>
+</div>
 </div>
 </main>
 <footer>

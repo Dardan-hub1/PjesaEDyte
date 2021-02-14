@@ -7,6 +7,7 @@ body {
 #header img{
         width: 220px;
         height:180px;
+       /* margin-right:90px;*/
     }
     #header1 ul{
         list-style:none;
@@ -36,17 +37,23 @@ body {
         padding: 12px;
     }
     #formulari{
-        margin-bottom: 30px;
+      /*  margin-bottom: 30px;*/
         display: flex;
         width: 43%;
         height: 35%;
         border-radius: 30px;
         flex-direction: column;
+        justify-content: center;
         align-items: center;
-        margin-left: 400px;
+        /*margin-left: 350px;*/
         font-size: 20px;
         color:#142c97 ;
         background-color: white;
+    }
+    #formulari2{
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
   #header1 a{
       padding: 0.5px;
@@ -118,5 +125,10 @@ input{
 @media only screen and(max-width:400px){
     #formulari{
         margin-left:285px ;
+        flex-direction:row ;
+    }
+    #header img{
+        margin-left: 150px;
+
     }
 }

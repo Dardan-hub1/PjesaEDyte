@@ -77,7 +77,7 @@
                     ?>
                     <div id="cars2">
                             <h3>Tipi: <?php echo $vehicle['type'];?></h3>
-                            <h3>MOdeli: <?php echo $vehicle['model'];?></h3>
+                            <h3>Modeli: <?php echo $vehicle['model'];?></h3>
                             <h3>Viti: <?php echo $vehicle['year'];?></h3>
                             <h3>Cmimi: <?php echo $vehicle['price'];?></h3>
                             <h3>URL-File: <?php echo $vehicle['Image_Url'];?></h3>

@@ -5,6 +5,7 @@
 <link rel='stylesheet' href='../css/stili9.css' type='text/css' />
 </head>
 <body>
+<div id="formulari2">
 <div id="formulari">
     <div id="full-content">
     <header>
@@ -23,7 +24,7 @@
        <li><label>Type:</label></li>
        <li><input type="text" id="type" name="type" placeholder="Type"/></li>
        <li><label>Model:</label></li>
-       <li><input type="text" id="Model"name="model" placeholder="Model"/></li>
+       <li><input type="text" id="model"name="model" placeholder="Model"/></li>
        <li><label>Price:</label></li>
        <li><input type="number" id="price"name="price" placeholder="Price"/></li>
        <li><label>Year:</label></li>
@@ -35,6 +36,7 @@
 </div>
 </form>
 </main>
+</div>
 </div>
 </div>
 </body>
