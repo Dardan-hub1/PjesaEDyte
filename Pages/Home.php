@@ -8,7 +8,7 @@
         $vehicleList = $mapper->getAllVehicles();
       ?>
         <title>Home</title>
-        <link href="../css/stili7.css" rel="stylesheet" type="text/css">
+        <link href="../css/stili10.css" rel="stylesheet" type="text/css">
         </head>
     <body>
         <header>
@@ -52,22 +52,22 @@
             </div>
         </header>
         <main>
-            <h1>This page is Home Page</h1>
-            <div id='table'>
+            <div id='list'>
         <h2>Vehicle list:</h2>
+        </div>
         <?php
             if (isset($_SESSION["role"]) && $_SESSION['role'] == '1') {
                 foreach ($vehicleList as $vehicle) {
                     ?>
-                        <div>
+                        <div id='cars'>
                             <h3>Tipi: <?php echo $vehicle['type'];?></h3>
-                            <h3>MOdeli: <?php echo $vehicle['model'];?></h3>
+                            <h3>Modeli: <?php echo $vehicle['model'];?></h3>
                             <h3>Viti: <?php echo $vehicle['year'];?></h3>
-                            <h3>Cmimi: <?php echo $vehicle['price'];?></h3>
-                            <a href=<?php echo "../Vehicle/deleteVehicle.php?id=" . $vehicle['id'];
-                                        ?>>Edito</a>
-                            <a href=<?php echo "../Vehicle/deleteVehicle.php?id=" . $vehicle['id'];
-                                        ?>>Fshij</a>
+                            <h3>Cmimi: <?php echo $vehicle['price'];?>$</h3>
+                            <h3><a href=<?php echo "../Vehicle/editVehicle.php?id=" . $vehicle['id'];
+                                        ?>>Edito</a></h3>
+                            <h3><a href=<?php echo "../Vehicle/deleteVehicle.php?id=" . $vehicle['id'];
+                                        ?>>Fshij</a><h3>
                         </div>
                     <?php
                 }

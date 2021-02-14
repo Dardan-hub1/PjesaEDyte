@@ -51,8 +51,8 @@ body {
   #header1 a{
       padding: 0.5px;
     text-decoration: none;
-    padding-left: 60px;
-    padding-right: 60px;
+    padding-left: 30px;
+    padding-right: 30px;
   }
 input{
     border-radius:square 50px;
@@ -115,8 +115,10 @@ input{
     border:black;
     background-color: rgb(221, 219, 219); 
 }
-@media only screen and(max-width:600px){
-body{
-    margin-left: 320px;
-}
-}
+@media only screen and(max-width:400px){
+    #formulari{
+        margin-left:10px ;
+    }
+    #mainForm{
+        margin-left: 10px;
+    }

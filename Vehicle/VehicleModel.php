@@ -5,15 +5,15 @@ class VehicleModel
     protected $model;
     protected  $price;
     protected $year;
-    protected $edited_by;
+   /* protected $edited_by;*/
     protected  $imgUrl;
 
-    public function __construct($type,$model, $price,$year, $edited_by, $imgUrl) {
+    public function __construct($type,$model, $price,$year, $imgUrl) {
         $this->type = $type;
         $this->model = $model;
         $this->price=$price;
         $this->year=$year;
-        $this->edited_by = $edited_by;
+      /*  $this->edited_by = $edited_by;*/
         $this->imgUrl = $imgUrl;
     }
     public function getType()
@@ -32,10 +32,10 @@ class VehicleModel
     {
         return $this->year;
     }
-    public function getEditedBy()
+    /*public function getEditedBy()
     {
         return $this->edited_by;
-    }
+    }*/
     public function getImgUrl()
     {
         return $this->imgUrl;

@@ -40,6 +40,18 @@ class VehicleMapper extends DatabasePDOConfiguration
         $result = $statement->fetchAll(PDO::FETCH_ASSOC);
         return $result;
     }
+    public function editVehicle(\VehicleModel $vehicle, $vehicleId)
+    {
+        $this->query = "update vehicle set price=:price, model=:model where id=:vehicleId";
+        var_dump($vehicle);
+        $statement = $this->conn->prepare($this->query);
+        $price = $vehicle->getPrice();
+        $model = $vehicle->getModel();
+        $statement->bindParam(":price", $price);
+        $statement->bindParam(":model", $model);
+        $statement->bindParam(":id", $vehicleId);
+        $statement->execute();
+    }
 
     public function insertVehicle(\VehicleModel $vehicle)
     {
@@ -54,7 +66,7 @@ class VehicleMapper extends DatabasePDOConfiguration
         $statement->bindParam(":model", $model);
         $statement->bindParam(":price", $price);
         $statement->bindParam(":year", $year);
-        $statement->bindParam(":edited_by", $edited_by);
+        /*$statement->bindParam(":edited_by", $edited_by);*/
         $statement->bindParam(":imgUrl", $Image_Url);
         $statement->execute();
     }

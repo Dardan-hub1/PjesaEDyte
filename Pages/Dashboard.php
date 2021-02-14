@@ -27,7 +27,7 @@ if (isset($_SESSION['role']) && $_SESSION['role'] == '1') {
                         <li><a href="#">SUV&CROSSOVERS</a></li>
                         <li><a href="#">ELICTRIFIED</a></li>
                         <li><a href="#">CARS</a></li>
-                        <li><a href="#">Add Vehicle</a></li>
+                        <li><a href="./AddVehicle.php">Add Vehicle</a></li>
                     </ul>
                 </div>
             <div id="headerD">
@@ -42,6 +42,7 @@ if (isset($_SESSION['role']) && $_SESSION['role'] == '1') {
             </div>
         </header>
         <main>
+             <div id='users'>
             <div id='table'>
         <h2>User list:</h2>
         <table border='1'>
@@ -63,7 +64,7 @@ if (isset($_SESSION['role']) && $_SESSION['role'] == '1') {
                         <td><?php echo $user['username']; ?></td>
                         <td><?php echo $user['userLastname']; ?></td>
                         <td><?php echo $user['role']; ?></td>
-                        <td><a href=<?php echo "../Login&Register1/detailsUser.php?id=" . $user['userid']; //to be continued by students
+                        <td><a href=<?php echo "../Login&Register1/detailsUser.php?id=" . $user['userid']; 
                                     ?>>Detajet</a></td>
                         <td><a href=<?php echo "../Pages/edit.php?id=" . $user['userid'];
                                     ?>>Modifiko</td>
@@ -73,10 +74,10 @@ if (isset($_SESSION['role']) && $_SESSION['role'] == '1') {
                 <?php
                 }
                 ?>
-            </tbody>
+                 </tbody>
         </table>
     </div>
-
+            </div>
 
         </main>
         <footer>
