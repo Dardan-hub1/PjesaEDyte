@@ -1,57 +1,43 @@
-    var usernameR= /^[a-zA-Z0-9]{12,}$/;
+    var usernameR= /^[a-zA-Z0-9]{10,}$/;
     var passwordR= /^[A-Z](?=[a-z]*)(?=.*[a-z])(?=.*[0-9])(?=.{10,})+$/;
-    var namesurnameR=/^[a-zA-Z0-9]{25,}$/;
-    var emailRegex = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    var namesurnameR=/^[a-zA-Z0-9]{20,}$/;
     
 function validate(number){
-        console.log("Number", number);
-        console.log("input list", inputList);
-        console.log(document)
-        alert("Ju lutem mbusheni te dhenat e juaja1");
-        username = inputList[0].value;
-        password = inputList[1].value;
+    
         var inputList=document.getElementsByClassName("login");
 
         if(number==0){
             if(inputList[0].value==="" || inputList[1].value===""){
-                alert("Ju lutem mbusheni te dhenat e juaja1");
+                alert("Ju lutem mbusheni te dhenat e juaja");
             }
-            else if(usernameR.test(username) && passwordR.test(password)){
-                alert('Te dhenat e juaja nuk jane ne rregull');
+            else if(usernameR.value.test(inputList[0].value) && passwordR.test(inputList[1].value)){
+                alert('Te dhenat e juaja jane ne rregull');
             }
-            else if(!usernameR.test(username)){
+            else if(!usernameR.test(inputList[0].value)){
                 alert('Username juaj nuk eshte ne rregull');
             }
-            else if(!passwordR.test(password)){
+            else if(!passwordR.test(inputList[1].value)){
                 alert('Passwordi juaj nuk eshte ne rregull');
-            }
-            else{
-                alert('Correct')
             }
         }
 
-        namesurname=inputList[3].value;
-        email=inputList[4].value;
-        password2=inputList[5].value;
 
-        if (number==1) {
-            if (namesurname === "" || email=== "" || password2=== "") {
-                alert("Ju lutem mbusheni te dhenat e juaja1...")
-            } else if (namesurname.test(namesurnameR) && email.test(emailRegex) && password2.test(passwordR)){
+        else if (number==1) {
+            if (inputList[3].value === "" ||inputList[4].value=== "" ||inputList[5].value=== "") {
+                alert("Ju lutem mbusheni te dhenat e juaja")
+            } else if (inputList[3].value.test(namesurnameR) && inputList[4].value.test(namesurnameR) && inputList[5].value.test(passwordR)){
                 alert("Te dhenat e juaja jane ne rregull");
-            } else if(!namesurname.test(namesurnameR)){
+            } else if(!namesurnameR.test(inputList[3].value)){
                 alert("Name&Surname nuk jane ne rregull");
             }
-              else if(!email.test(emailRegex)){
+              else if(!namesurnameR.test(inputList[4].value)){
                 alert("Email nuk eshte ne rregull");
             } 
-              else if(!password2.test(passwordR)){
+              else if(!passwordR.test(inputList[5].value)){
                 alert("Passwordi nuk eshte ne rregull");
             } 
         }
     }
-    
-
     function changeForm(number){
 
         var divElements=document.getElementsByClassName('forms');
@@ -66,5 +52,5 @@ function validate(number){
           divElements[0].classList.add('hidden')
           divElements[0].classList.remove('form-style')
         }
-        }
-    
+        }   
+       

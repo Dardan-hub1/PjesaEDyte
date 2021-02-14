@@ -30,7 +30,7 @@
                     ?>
                     <div id="headerD">
                             <ul>
-                                <li><a href="#">MY ACCOUNT</a></li>
+                                <li><a href="./Account.php">MY ACCOUNT</a></li>
                                 <li><a href="#">EN</a></li>
                                 <li><a href="./Dashboard.php">Dashboard</a></li>
                                 <li><a href="../Login&Register1/logout.php">Logout</a></li>
@@ -59,11 +59,12 @@
             if (isset($_SESSION["role"]) && $_SESSION['role'] == '1') {
                 foreach ($vehicleList as $vehicle) {
                     ?>
-                        <div id='cars'>
+                    <div id='cars'>
                             <h3>Tipi: <?php echo $vehicle['type'];?></h3>
                             <h3>Modeli: <?php echo $vehicle['model'];?></h3>
                             <h3>Viti: <?php echo $vehicle['year'];?></h3>
                             <h3>Cmimi: <?php echo $vehicle['price'];?>$</h3>
+                            <h3>URL-File: <?php echo $vehicle['Image_Url'];?>$</h3>
                             <h3><a href=<?php echo "../Vehicle/editVehicle.php?id=" . $vehicle['id'];
                                         ?>>Edito</a></h3>
                             <h3><a href=<?php echo "../Vehicle/deleteVehicle.php?id=" . $vehicle['id'];
@@ -74,15 +75,18 @@
             } else {
                 foreach ($vehicleList as $vehicle) {
                     ?>
-                        <div>
+                    <div id="cars2">
                             <h3>Tipi: <?php echo $vehicle['type'];?></h3>
                             <h3>MOdeli: <?php echo $vehicle['model'];?></h3>
                             <h3>Viti: <?php echo $vehicle['year'];?></h3>
                             <h3>Cmimi: <?php echo $vehicle['price'];?></h3>
-                            <a href=<?php echo "../Vehicle/deleteVehicle.php?id=" . $vehicle['id'];
-                                        ?>>Edito</a>
-                        </div>
+                            <h3>URL-File: <?php echo $vehicle['Image_Url'];?></h3>
+                            <h3><a href=<?php echo "../Vehicle/deleteVehicle.php?id=" . $vehicle['id'];
+                                        ?>>Edito</a></h3>
+                    </div>
+
                     <?php
+
                 }
             }
         ?>

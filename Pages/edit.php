@@ -46,7 +46,7 @@ if (isset($_GET['id'])) {
             <label for="">Name:</label>
             <input type="text" name='username' class="input" placeholder="username..." value=<?php echo $user['username']; ?> />
             <label for="">Last Name:</label>
-            <input type="text" name='lastName' class="input" placeholder="lastname..." value=<?php echo $user['userLastname']; ?> />
+            <input type="text" name='lastName' class="input" placeholder="lastname..." value=<?php echo $user['userLastName']; ?> />
             <input id="submit" type="submit" name='login-btn' class="input submit" value="Edit" />
         </div>
     </form>

@@ -56,14 +56,18 @@ li a{text-decoration: none;
     font-size: 55px;
     width:80%;
     margin-left:55px;
-    margin-bottom:150px;
+    /*margin-bottom:150px;*/
 }
 #table {
     text-align: center;
     color: rgb(33, 66, 126);
 }
 #users{
-    background-color: rgb(75, 176, 216);
+    background-color: rgb(146, 181, 196);
+    font-size: 35px;
+    width:45%;
+    margin-left:35px;
+    margin-bottom:150px;
 }
 
 

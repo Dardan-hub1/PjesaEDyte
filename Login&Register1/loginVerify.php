@@ -81,7 +81,6 @@ class RegisterLogic
 
     public function insertData()
     {
-        echo "WRONG";
         $user = new SimpleUser($this->username, $this->password, 25, 0, $this->userLastName);
 
         $mapper = new UserMapper();

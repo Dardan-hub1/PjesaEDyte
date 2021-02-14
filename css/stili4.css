@@ -43,7 +43,7 @@ body {
         border-radius: 30px;
         flex-direction: column;
         align-items: center;
-        margin-left: 430px;
+        margin-left: 400px;
         font-size: 20px;
         color:#142c97 ;
         background-color: white;
@@ -117,8 +117,6 @@ input{
 }
 @media only screen and(max-width:400px){
     #formulari{
-        margin-left:10px ;
+        margin-left:285px ;
     }
-    #mainForm{
-        margin-left: 10px;
-    }
+}

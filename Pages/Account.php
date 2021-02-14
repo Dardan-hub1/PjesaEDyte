@@ -2,7 +2,10 @@
 <html>
 <head>
 <title>Account Page</title>
-<link rel='stylesheet' href='../css/stili4.css' type='text/css' />
+
+<?php 
+echo '<script src="../js/scripta.js">  </script> ';?>
+<link rel='stylesheet' href='../css/stili4.css' type='text/css'/>
 </head>
 <body>
     <div id="full-content">
@@ -28,7 +31,7 @@
 <li><input type="text" name="username" id="userid" class="login" size="15" placeholder="Username"/></li>
 <li><label>Password:</label></li>
 <li><input type="password" name="password" id="pass" size="15" class="login" placeholder="Password"/></li>
-<li><input type="submit" value="Login"  id="login-btn" name='login-btn'/></li>
+<li><input type="submit" value="Login"  id="login-btn" name='login-btn' onclick="validate(0)"/></li>
 </ul>
 </div>
 <div class="register forms hidden">
@@ -41,7 +44,7 @@
        <li><input type="text" id="lastname" class="login" size="40" name="register-lastname" placeholder="Email"/></li>
        <li><label>Password:</label></li>
        <li><input type="password" id="pass" class="login" size="15" name="register-password" placeholder="Password"/></li>
-       <li><input type="submit"  id="login-btn" value="Register" name='register-btn' /></li>
+       <li><input type="submit"  id="login-btn" value="Register" name='register-btn'  onclick="validate(1)"/></li>
     </ul>
 </div>
 </form>

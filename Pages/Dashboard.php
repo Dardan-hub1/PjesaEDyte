@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html>
 <?php
-//include_once '../Login&Register1/variables.php';
 include_once '../Login&Register1/userMapper.php';
 session_start();
 if (isset($_SESSION['role']) && $_SESSION['role'] == '1') {
@@ -42,9 +41,10 @@ if (isset($_SESSION['role']) && $_SESSION['role'] == '1') {
             </div>
         </header>
         <main>
-             <div id='users'>
             <div id='table'>
         <h2>User list:</h2>
+</div>
+<div id='users'>
         <table border='1'>
             <thead>
                 <tr>
@@ -62,7 +62,7 @@ if (isset($_SESSION['role']) && $_SESSION['role'] == '1') {
                 ?>
                     <tr>
                         <td><?php echo $user['username']; ?></td>
-                        <td><?php echo $user['userLastname']; ?></td>
+                        <td><?php echo $user['userLastName']; ?></td>
                         <td><?php echo $user['role']; ?></td>
                         <td><a href=<?php echo "../Login&Register1/detailsUser.php?id=" . $user['userid']; 
                                     ?>>Detajet</a></td>
@@ -77,8 +77,6 @@ if (isset($_SESSION['role']) && $_SESSION['role'] == '1') {
                  </tbody>
         </table>
     </div>
-            </div>
-
         </main>
         <footer>
             <div id="footer">

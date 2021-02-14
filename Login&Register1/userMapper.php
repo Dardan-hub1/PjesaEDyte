@@ -11,7 +11,15 @@ class UserMapper extends DatabasePDOConfiguration
     {
         $this->conn = $this->getConnection();
     }
-
+    public function getID($userId)
+    {
+        $this->query = "select userid from user where userid=:id";
+        $statement = $this->conn->prepare($this->query);
+        $statement->bindParam(":id", $userId);
+        $statement->execute();
+        $result = $statement->fetch(PDO::FETCH_ASSOC);
+        return $result;
+    }
     public function getUserByID($userId)
     {
         $this->query = "select * from user where userid=:id";
@@ -56,7 +64,7 @@ class UserMapper extends DatabasePDOConfiguration
 
     public function insertUser(\SimpleUser $user)
     {
-        $this->query = "insert into user (username, userLastName,password, role) values (:username,:lastname,:pass,:role)";
+        $this->query = "insert into user (username,userLastName,password, role) values (:username,:lastname,:pass,:role)";
         $statement = $this->conn->prepare($this->query);
         $username = $user->getUsername();
         $lastname = $user->getLastname();
