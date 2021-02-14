@@ -6,9 +6,21 @@ require_once 'VehicleModel.php';
 // require_once 'userMapper.php';
 
 session_start();
+if (isset($_POST['vehicle-btn'])) {
+    $file = $_FILES['file'];
 
- if (isset($_POST['vehicle-btn'])) {
-    $register = new AddVehicle($_POST);
+    $fileName = $_FILES['file']['name'];
+    $fileTmpName = $_FILES['file']['tmp_name'];
+    $fileSize = $_FILES['file']['size'];
+    $fileType = $_FILES['file']['type'];
+
+    $fileExt = explode('.', $fileName);
+    $fileActualExt = strtolower(end($fileExt));
+    $fileNameNew = uniqid('', true).".".$fileActualExt;
+    $fileDestination = '../uploads/'.$fileNameNew;
+    move_uploaded_file($fileTmpName, $fileDestination);
+
+    $register = new AddVehicle($_POST, $fileDestination);
     $register->insertData();
 } else {
     header("Location:../Pages/Account.php");
@@ -24,13 +36,13 @@ class AddVehicle
     // $mapper = new UserMapper();
     // private $edited_by= $mapper->getId($user);
 
-    public function __construct($formData)
+    public function __construct($formData, $fileDestination)
     {
         $this->type = $formData['type'];
         $this->model = $formData['model'];
         $this->price=$formData['price'];
         $this->year=$formData['year'];
-        $this->imgUrl =$formData['file'];
+        $this->imgUrl = $fileDestination;
     }   
 
     public function insertData()

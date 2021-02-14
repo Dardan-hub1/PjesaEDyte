@@ -4,8 +4,8 @@
 <title>AddVehicle</title>
 <link rel='stylesheet' href='../css/stili9.css' type='text/css' />
 </head>
+<div class='cars'>
 <body>
-<div id="formulari2">
 <div id="formulari">
     <div id="full-content">
     <header>
@@ -13,11 +13,10 @@
         <ul>
             <li><img src="../photos/Ford-logo-1.png"></li>
         </ul>
-    </div>
 </div>
 </header>
 <main>
-<form id="mainForm" action="../Vehicle/VehicleVerify.php" method="post" onsubmit="return validate()">
+<form id="mainForm" action="../Vehicle/VehicleVerify.php" method="post" enctype="multipart/form-data" onsubmit="return validate()">
 <p>Add a Vehicle in the page</p>
 <div class="register forms">
     <ul>
@@ -39,7 +38,9 @@
 </div>
 </div>
 </div>
+</div>
 </body>
+</div>
 <footer>
     <div id="footer">
         <h3>California Resident</h3>

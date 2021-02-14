@@ -64,7 +64,8 @@
                             <h3>Modeli: <?php echo $vehicle['model'];?></h3>
                             <h3>Viti: <?php echo $vehicle['year'];?></h3>
                             <h3>Cmimi: <?php echo $vehicle['price'];?>$</h3>
-                            <h3>URL-File: <?php echo $vehicle['Image_Url'];?>$</h3>
+                            <h3>username: <?php echo $_SESSION["username"];?></h3>
+                            <?php echo "<img src='{$vehicle['Image_Url']}'"?>;
                             <h3><a href=<?php echo "../Vehicle/editVehicle.php?id=" . $vehicle['id'];
                                         ?>>Edito</a></h3>
                             <h3><a href=<?php echo "../Vehicle/deleteVehicle.php?id=" . $vehicle['id'];
@@ -80,7 +81,8 @@
                             <h3>Modeli: <?php echo $vehicle['model'];?></h3>
                             <h3>Viti: <?php echo $vehicle['year'];?></h3>
                             <h3>Cmimi: <?php echo $vehicle['price'];?></h3>
-                            <h3>URL-File: <?php echo $vehicle['Image_Url'];?></h3>
+                            <?php echo "<img src='{$vehicle['Image_Url']}'"?>;
+                            <h3>username: <?php echo $_SESSION["username"];?></h3>
                             <h3><a href=<?php echo "../Vehicle/deleteVehicle.php?id=" . $vehicle['id'];
                                         ?>>Edito</a></h3>
                     </div>

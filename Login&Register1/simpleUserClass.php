@@ -4,14 +4,17 @@ include_once 'personClass.php';
 class SimpleUser extends Person
 {
     private $lastname;
+    private $username;
     public function __construct($username,  $password, $age, $role, $lastname)
     {
         parent::__construct($username, $password, $age, $role);
         $this->lastname = $lastname;
+        $this->username = $username;
     }
 
     public function setSession()
     {
+        $_SESSION["username"] = $this->username;
         $_SESSION["role"] = "0";
         $_SESSION['roleName'] = "SimpleUser";
     }

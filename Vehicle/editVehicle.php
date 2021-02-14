@@ -2,7 +2,7 @@
 
 include_once 'VehicleMapper.php';
 include_once 'VehicleModel.php';
-if (isset($_GET['price']) && isset($_GET['price'])) {
+if (isset($_GET['id']) && isset($_GET['price'])) {
     $vehicleId = $_GET['id'];
     $price = $_GET['price'];
     $model = $_GET['model'];

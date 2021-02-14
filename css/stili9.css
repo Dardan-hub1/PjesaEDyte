@@ -25,7 +25,7 @@ body {
     }
     #formulari{
        /* margin-bottom: 30px;*/
-        /*display: flex;*/
+        display: flex;
         width: 43%;
         height: 35%;
         border-radius: 30px;
@@ -36,11 +36,10 @@ body {
         color:#142c97 ;
        background-color: white;
     }
-    #formulari2{
+.cars{
     display: flex;
-    align-items: center;
-    justify-content: center;
-    }
+  justify-content: center;
+}
   
 input{
     border-radius:square 50px;

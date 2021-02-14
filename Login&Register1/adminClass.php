@@ -4,15 +4,17 @@ require_once 'personClass.php';
 
 class Admin extends Person
 {
+    protected $username;
     public function __construct($username, $password, $age, $role)
     {
         parent::__construct($username, $password, $age, $role); //equivalent to super in java
+        $this->username = $username;
     }
 
 
     public function setSession()
     {
-
+        $_SESSION["username"] = $this->username;
         $_SESSION["role"] = 1;
         $_SESSION['roleName'] = "Administrator";
     }

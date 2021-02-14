@@ -11,15 +11,6 @@ class UserMapper extends DatabasePDOConfiguration
     {
         $this->conn = $this->getConnection();
     }
-    public function getID($userId)
-    {
-        $this->query = "select userid from user where userid=:id";
-        $statement = $this->conn->prepare($this->query);
-        $statement->bindParam(":id", $userId);
-        $statement->execute();
-        $result = $statement->fetch(PDO::FETCH_ASSOC);
-        return $result;
-    }
     public function getUserByID($userId)
     {
         $this->query = "select * from user where userid=:id";
