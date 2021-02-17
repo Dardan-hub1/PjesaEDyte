@@ -5,7 +5,7 @@ include_once '../Vehicle/VehicleMapper.php';
 if (isset($_GET['id'])) {
     $vehicleId = $_GET['id'];
     $mapper = new VehicleMapper();
-    $vehicle = $mapper-> getUserByID($vehicleId);
+    $vehicle = $mapper-> getVehicleByID($vehicleId);
 }
 ?>
 <head>
@@ -42,11 +42,15 @@ if (isset($_GET['id'])) {
     <h1>Modifiko makinen</h1>
     <form class="mainForm" action="../Vehicle/editVehicle.php" method="get">
         <div class="login forms form-style">
-            <input type="text" style="display:none;" value=<?php echo $userId;?> name="id" />
-            <label for="">Price:</label>
-            <input type="text" name='price' class="input" placeholder="Price" value=<?php echo $vehicle['price']; ?> />
+            <input type="text" style="display:none;" value=<?php echo $vehicle['id'];?> name="id" />
+            <label for="">Type:</label>
+            <input type="text" name='type' class="input" placeholder="Type" value=<?php echo $vehicle['type']; ?> />
             <label for="">Model:</label>
             <input type="text" name='model' class="input" placeholder="Model" value=<?php echo $vehicle['model']; ?> />
+            <label for="">Price:</label>
+            <input type="text" name='price' class="input" placeholder="Price" value=<?php echo $vehicle['price']; ?> />
+            <label for="">Year:</label>
+            <input type="text" name='year' class="input" placeholder="Year" value=<?php echo $vehicle['year']; ?> />
             <input id="submit" type="submit" name='login-btn' class="input submit" value="Edit" />
         </div>
     </form>

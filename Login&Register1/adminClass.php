@@ -12,9 +12,9 @@ class Admin extends Person
     }
 
 
-    public function setSession()
+    public function setSession($userName)
     {
-        $_SESSION["username"] = $this->username;
+        $_SESSION["username"] = $userName;
         $_SESSION["role"] = 1;
         $_SESSION['roleName'] = "Administrator";
     }

@@ -80,6 +80,14 @@ li a:hover{border-bottom: 0.5px solid rgb(169, 169, 223);
 #cars2 h3{
     margin: 20px;
 }
+#cars img{
+    height: 50px;
+    width: 100px;
+}
+#cars2 img{
+    height: 50px;
+    width: 100px;
+}
 
 
 

@@ -20,7 +20,8 @@ if (isset($_POST['vehicle-btn'])) {
     $fileDestination = '../uploads/'.$fileNameNew;
     move_uploaded_file($fileTmpName, $fileDestination);
 
-    $register = new AddVehicle($_POST, $fileDestination);
+    $edited_by = $_SESSION["username"];
+    $register = new AddVehicle($_POST, $fileDestination, $edited_by);
     $register->insertData();
 } else {
     header("Location:../Pages/Account.php");
@@ -33,24 +34,25 @@ class AddVehicle
     private $price="";
     private $year="";
     private $imgUrl="";
+    private $edited_by = '';
     // $mapper = new UserMapper();
-    // private $edited_by= $mapper->getId($user);
 
-    public function __construct($formData, $fileDestination)
+    public function __construct($formData, $fileDestination, $edited_by)
     {
         $this->type = $formData['type'];
         $this->model = $formData['model'];
         $this->price=$formData['price'];
         $this->year=$formData['year'];
         $this->imgUrl = $fileDestination;
+        $this->edited_by = $edited_by;
     }   
 
     public function insertData()
     {
-        $vehicle = new VehicleModel($this->type,$this->model, $this->price,$this->year, $this->imgUrl);
+        $vehicle = new VehicleModel($this->type,$this->model, $this->price,$this->year, $this->imgUrl, $this->edited_by);
 
         $mapper = new VehicleMapper();
         $mapper->insertVehicle($vehicle);
-        header("Location:../Pages/Account.php");
+        header("Location:../Pages/Home.php");
     }
 }

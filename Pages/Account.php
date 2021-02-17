@@ -42,7 +42,7 @@ echo '<script src="../js/scripta.js">  </script> ';?>
        <li><label>Name and Surname:</label></li>
        <li><input type="text" id="name" class="login" size="40" name="register-username" placeholder="Name Surname"/></li>
        <li><label>Lastname:</label></li>
-       <li><input type="text" id="lastname" class="login" size="40" name="register-lastname" placeholder="Email"/></li>
+       <li><input type="text" id="lastname" class="login" size="40" name="register-lastname" placeholder="Lastname"/></li>
        <li><label>Password:</label></li>
        <li><input type="password" id="pass" class="login" size="15" name="register-password" placeholder="Password"/></li>
        <li><input type="submit"  id="login-btn" value="Register" name='register-btn'  onclick="validate(1)"/></li>

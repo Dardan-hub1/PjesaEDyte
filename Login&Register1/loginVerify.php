@@ -56,10 +56,10 @@ class LoginLogic
         else if (password_verify($password, $user['password'])) {
             if ($user['role'] == 1) {
                 $obj = new Admin($user['id'], $user['username'], $user['password'], $user['role']);
-                $obj->setSession();
+                $obj->setSession($user['username']);
             } else {
                 $obj = new SimpleUser($user['id'], $user['username'], $user['password'], $user['role'], "");
-                $obj->setSession();
+                $obj->setSession($user['username']);
             }
             return true;
         } else return false;

@@ -12,9 +12,9 @@ class VehicleMapper extends DatabasePDOConfiguration
         $this->conn = $this->getConnection();
     }
 
-    public function getUserByID($vehicleId)
+    public function getVehicleById($vehicleId)
     {
-        $this->query = "select * from vehicle where vehicleId=:id";
+        $this->query = "select * from vehicle where id=:id";
         $statement = $this->conn->prepare($this->query);
         $statement->bindParam(":id", $vehicleId);
         $statement->execute();
@@ -42,31 +42,37 @@ class VehicleMapper extends DatabasePDOConfiguration
     }
     public function editVehicle(\VehicleModel $vehicle, $vehicleId)
     {
-        $this->query = "update vehicle set price=:price, model=:model where id=:vehicleId";
-        var_dump($vehicle);
+        $this->query = "update vehicle set type=:type, price=:price, model=:model, year=:year, edited_by=:edited_by where id=:id";
         $statement = $this->conn->prepare($this->query);
-        $price = $vehicle->getPrice();
+        $type = $vehicle->getType();
         $model = $vehicle->getModel();
-        $statement->bindParam(":price", $price);
-        $statement->bindParam(":model", $model);
+        $price = $vehicle->getPrice();
+        $year = $vehicle->getYear();
+        $edited_by = $vehicle->getEditedBy();
         $statement->bindParam(":id", $vehicleId);
+        $statement->bindParam(":type", $type);
+        $statement->bindParam(":model", $model);
+        $statement->bindParam(":price", $price);
+        $statement->bindParam(":year", $year);
+        $statement->bindParam(":edited_by", $edited_by);
         $statement->execute();
     }
 
     public function insertVehicle(\VehicleModel $vehicle)
     {
-        $this->query = "insert into vehicle (type,model,price,year, Image_Url) values (:type,:model,:price,:year, :imgUrl)";
+        $this->query = "insert into vehicle (type,model,price,year, Image_Url, edited_by) values (:type,:model,:price,:year, :imgUrl, :edited_by)";
         $statement = $this->conn->prepare($this->query);
         $type = $vehicle->getType();
         $model = $vehicle->getModel();
         $price = $vehicle->getPrice();
         $year = $vehicle->getYear();
         $Image_Url = $vehicle->getImgUrl();
+        $edited_by = $vehicle->getEditedBy();
         $statement->bindParam(":type", $type);
         $statement->bindParam(":model", $model);
         $statement->bindParam(":price", $price);
         $statement->bindParam(":year", $year);
-        /*$statement->bindParam(":edited_by", $edited_by);*/
+        $statement->bindParam(":edited_by", $edited_by);
         $statement->bindParam(":imgUrl", $Image_Url);
         $statement->execute();
     }
