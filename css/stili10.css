@@ -61,10 +61,11 @@ li a:hover{border-bottom: 0.5px solid rgb(169, 169, 223);
 #cars{
     display: flex;
     flex-direction: row;
-    margin: 15px;
+    text-align: center;
     background-color: rgb(202, 200, 200);
     color: rgb(3, 14, 172);
     font-size: 20px;
+    margin: 15px;
 }
 #cars h3{
     margin: 20px;
@@ -72,42 +73,23 @@ li a:hover{border-bottom: 0.5px solid rgb(169, 169, 223);
 #cars2{
     display: flex;
     flex-direction: row;
-    margin: 15px;
+    text-align: center;
     background-color: rgb(202, 200, 200);
     color: rgb(3, 14, 172);
     font-size: 20px;
+    margin: 15px;
 }
 #cars2 h3{
     margin: 20px;
 }
 #cars img{
-    height: 50px;
-    width: 100px;
+    height: 150px;
+    width: 350px;
 }
 #cars2 img{
-    height: 50px;
-    width: 100px;
+    height: 150px;
+    width: 350px;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 #footer{
     background-color: rgb(33, 66, 126);
     text-align: center;
@@ -125,4 +107,8 @@ li a:hover{border-bottom: 0.5px solid rgb(169, 169, 223);
     padding-right: 10px;
     padding-top: 0px;
     padding-bottom: 5px;
+}
+@media only screen and(max-width:375px){
+
+
 }

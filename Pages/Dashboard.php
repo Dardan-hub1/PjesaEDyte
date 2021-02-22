@@ -33,8 +33,6 @@ if (isset($_SESSION['role']) && $_SESSION['role'] == '1') {
                     <ul>
                         <li><a href="#">MY ACCOUNT</a></li>
                         <li><a href="#">FINANCE</a></li>
-                        <li><a href="#">SUPPORT</a></li>
-                        <li><a href="#">EN</a></li>
                         <li><a href="../Login&Register1/logout.php">Logout</a></li>
                     </ul>
             </div>
@@ -51,7 +49,7 @@ if (isset($_SESSION['role']) && $_SESSION['role'] == '1') {
                     <td>Emri</td>
                     <td>Mbiemri</td>
                     <td>Roli</td>
-                    <td>Modifiko</td>
+                    <td>Edito</td>
                     <td>Fshij</td>
                 </tr>
             </thead>
@@ -64,7 +62,7 @@ if (isset($_SESSION['role']) && $_SESSION['role'] == '1') {
                         <td><?php echo $user['userLastName']; ?></td>
                         <td><?php echo $user['role']; ?></td>
                         <td><a href=<?php echo "../Pages/edit.php?id=" . $user['userid'];
-                                    ?>>Modifiko</td>
+                                    ?>>Edito</td>
                         <td><a href=<?php echo "../Login&Register1/deleteUser.php?id=" . $user['userid'];
                                     ?>>Fshij</td>
                     </tr>
