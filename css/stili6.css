@@ -60,9 +60,12 @@ li a{text-decoration: none;
 #users{
     background-color:  rgb(202, 200, 200);
     font-size: 35px;
-    width:35%;
+    width:36%;
     margin-left: 420px;
     margin-bottom:50px;
+}
+table{
+    border-color:black;
 }
 li a:hover{border-bottom: 0.5px solid rgb(169, 169, 223);
     color: rgb(75, 176, 216);                

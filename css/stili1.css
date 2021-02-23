@@ -38,6 +38,7 @@
 #headerD{
     display: flex;
     justify-content: flex-end;
+    flex: 2;
 }
 #headerD ul li{
     list-style: none;

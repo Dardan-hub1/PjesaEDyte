@@ -42,14 +42,14 @@ if (isset($_SESSION['role']) && $_SESSION['role'] == '1') {
         <h2>User list:</h2>
 </div>
 <div id='users'>
-        <table border='1'>
+        <table border='2'>
             <thead>
                 <tr>
-                    <td>Emri</td>
-                    <td>Mbiemri</td>
-                    <td>Roli</td>
-                    <td>Edito</td>
-                    <td>Fshij</td>
+                    <th>Emri</th>
+                    <th>Mbiemri</th>
+                    <th>Roli</th>
+                    <th>Edito</th>
+                    <th>Fshij</th>
                 </tr>
             </thead>
             <tbody>
