@@ -11,15 +11,17 @@
                 <div id="headerM">
                     <ul>
                         <li><a href="#"><img src="../photos/Ford-logo.jpg"></a></li>
-                        <li><a href="#">Vehicles</a></li>
+                        <li><a href="./Faqja_E_Pare.php">Vehicles</a></li>
                         <li><a href="#">Shop</a></li>
                         <li><a href="#">Finance</a></li>
                         <li><a href="#">Owner</a></li>
                         <li><a href="#">Ask Ford</a></li>
+                        <li><a href="./AddVehicle.php">Add Vehicle</a></li>
                     </ul>
                 </div>
             <div id="headerD">
                     <ul>
+                        <li><a href="./Account.php">My Account</a></li>
                         <li><a href="#"><img src="../photos/location.jpg"></a></li>
                         <li><a href="#">Locate a Dealer</a></li>
                     </ul>
@@ -45,7 +47,7 @@
                 <a href="#"><img src="../photos/F6.png"></a>
             </div>
             <div id="linku">
-                <a href="../Pages/Faqja_E_Katert.php">Ky link te dergon tek faqja tjeter</a>
+                <!-- <a href="../Pages/Faqja_E_Katert.php">Ky link te dergon tek faqja tjeter</a> -->
             </div>
             <p>Didn't find what you were looking for?</p>
             <div class="main4">

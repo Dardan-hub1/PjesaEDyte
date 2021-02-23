@@ -17,12 +17,11 @@
                 <div id="headerM">
                     <ul>
                         <li><a href="#"><img src="../Photos/Ford-logo.jpg"></a></li>
-                        <li><a href="#">SUV&CROSSOVERS</a></li>
-                        <li><a href="#">TRUCKS&VANS</a></li>
-                        <li><a href="#">SUV&CROSSOVERS</a></li>
-                        <li><a href="#">ELICTRIFIED</a></li>
-                        <li><a href="#">CARS</a></li>
-                        <li><a href="./AddVehicle.php">Add Vehicle</a></li>
+                        <li><a href="./Faqja_E_Pare.php">SUV&CROSSOVERS</a></li>
+                        <li><a href="./Faqja_E_Dyte.php">TRUCKS&VANS</a></li>
+                        <li><a href="./Faqja_E_Peste.php">ELICTRIFIED</a></li>
+                        <li><a href="./Faqja_E_Trete.php">CARS</a></li>
+                        <li><a href="./AddVehicle.php">ADD VEHICLE</a></li>
                     </ul>
                 </div>
                 <?php

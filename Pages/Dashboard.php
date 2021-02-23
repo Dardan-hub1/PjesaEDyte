@@ -21,19 +21,18 @@ if (isset($_SESSION['role']) && $_SESSION['role'] == '1') {
                 <div id="headerM">
                     <ul>
                         <li><a href="#"><img src="../Photos/Ford-logo.jpg"></a></li>
-                        <li><a href="#">SUV&CROSSOVERS</a></li>
-                        <li><a href="#">TRUCKS&VANS</a></li>
-                        <li><a href="#">SUV&CROSSOVERS</a></li>
-                        <li><a href="#">ELICTRIFIED</a></li>
-                        <li><a href="#">CARS</a></li>
+                        <li><a href="./Faqja_E_Pare.php">SUV&CROSSOVERS</a></li>
+                        <li><a href="./Faqja_E_Dyte.php">TRUCKS&VANS</a></li>
+                        <li><a href="./Faqja_E_Peste.php">ELICTRIFIED</a></li>
+                        <li><a href="./Faqja_E_Trete.php">CARS</a></li>
                         <li><a href="./AddVehicle.php">Add Vehicle</a></li>
                     </ul>
                 </div>
             <div id="headerD">
                     <ul>
-                        <li><a href="#">MY ACCOUNT</a></li>
-                        <li><a href="#">FINANCE</a></li>
-                        <li><a href="../Login&Register1/logout.php">Logout</a></li>
+                        <li><a href="./Account.php">MY ACCOUNT</a></li>
+                        <li><a href="./Home.php">HOME</a></li>
+                        <li><a href="../Login&Register1/logout.php">LOGOUT</a></li>
                     </ul>
             </div>
             </div>

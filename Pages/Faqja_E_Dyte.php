@@ -3,7 +3,7 @@
   <html lang="en">
 
 <head>
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />  
+      <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0" />   -->
       <title>Faqja e dyte</title>
       <link href="../css/stili2.css" rel="stylesheet" type="text/css">
     </head>
@@ -14,11 +14,10 @@
             <div id="headerM">
                 <ul>
                     <li><a href="#"><img src="../photos/Ford-logo.jpg"></a></li>
-                    <li><a href="#">SUV&CROSSOVERS</a></li>
-                    <li><a href="#">TRUCKS&VANS</a></li>
-                    <li><a href="#">SUV&CROSSOVERS</a></li>
-                    <li><a href="#">ELICTRIFIED</a></li>
-                    <li><a href="#">CARS</a></li>
+                    <li><a href="./Faqja_E_Pare.php">SUV&CROSSOVERS</a></li>
+                    <li><a href="./Faqja_E_Dyte.php">TRUCKS&VANS</a></li>
+                    <li><a href="./Faqja_E_Peste.php">ELICTRIFIED</a></li>
+                    <li><a href="./Faqja_E_Trete.php">CARS</a></li>
                     <li><a href="./AddVehicle.php">Add Vehicle</a></li>
                 </ul>
             </div>
@@ -53,7 +52,7 @@
         </div>
       </div>
       <div id="linku">
-        <a href="../Pages/Faqja_E_Trete.php">Ky link te dergon tek faqja tjeter</a>
+        <!-- <a href="../Pages/Faqja_E_Trete.php">Ky link te dergon tek faqja tjeter</a> -->
       </div>
       </main>
       <footer>

@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
         <title>Faqja e pare</title>
         <link href="../css/stili1.css"  rel="stylesheet" type="text/css">
         </head>
@@ -13,12 +13,11 @@
                 <div id="headerM">
                     <ul>
                         <li><a href="#"><img src="../Photos/Ford-logo.jpg"></a></li>
-                        <li><a href="#">SUV&CROSSOVERS</a></li>
-                        <li><a href="#">TRUCKS&VANS</a></li>
-                        <li><a href="#">SUV&CROSSOVERS</a></li>
-                        <li><a href="#">ELICTRIFIED</a></li>
-                        <li><a href="#">CARS</a></li>
-                        <li><a href="./AddVehicle.php">Add Vehicle</a></li>
+                        <li><a href="./Faqja_E_Pare.php">SUV&CROSSOVERS</a></li>
+                        <li><a href="./Faqja_E_Dyte.php">TRUCKS&VANS</a></li>
+                        <li><a href="./Faqja_E_Peste.php">ELICTRIFIED</a></li>
+                        <li><a href="./Faqja_E_Trete.php">CARS</a></li>
+                        <li><a href="./AddVehicle.php">ADD VEHICLE</a></li>
                     </ul>
                 </div>
             <div id="headerD">
@@ -76,7 +75,7 @@
             </div>
             </div>
             <div id="linku">
-            <a href="../Pages/Faqja_E_Dyte.php">Ky link te dergon tek faqja tjeter</a>
+            <!-- <a href="../Pages/Faqja_E_Dyte.php">Ky link te dergon tek faqja tjeter</a> -->
         </div>
         </main>
        <footer>
